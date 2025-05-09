@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/generalFiles/mainScreenPage.dart';
+import 'package:flutter_application_1/PortfolioOfChingiz/mainScreenPage.dart';
 
 class IntroductionPage extends StatelessWidget {
   const IntroductionPage({super.key});

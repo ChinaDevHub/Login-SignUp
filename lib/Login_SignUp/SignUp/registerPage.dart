@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Login/SignUp/loginPage.dart';
+import 'package:flutter_application_1/Login_SignUp/SignUp/loginPage.dart';
+import 'package:flutter_application_1/PortfolioOfChingiz/mainScreenPage.dart';
 
 class RegisterPage extends StatelessWidget {
 
@@ -49,6 +50,12 @@ class RegisterPage extends StatelessWidget {
 
     else {
       successfullyRegister(context, "Registration successful!");
+      MaterialPageRoute pageRoute = MaterialPageRoute(
+          builder: (context) {
+            return MainScreenPage();
+          }
+          );
+          Navigator.pushReplacement(context, pageRoute);
     }
   }
 

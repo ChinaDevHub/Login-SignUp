@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Login/SignUp/registerPage.dart';
+import 'package:flutter_application_1/Login_SignUp/SignUp/registerPage.dart';
+import 'package:flutter_application_1/PortfolioOfChingiz/mainScreenPage.dart';
 
 class loginPage extends StatefulWidget {
 
@@ -45,6 +46,12 @@ class _loginPageState extends State<loginPage> {
     if(emailController.text==myEmail && passwordController.text==myPassword)
       {
         successfullyLogIn(context, "LogIn successful!");
+        MaterialPageRoute pageRoute = MaterialPageRoute(
+          builder: (context) {
+            return MainScreenPage();
+          }
+          );
+          Navigator.pushReplacement(context, pageRoute);
       }
     //Incorrect email ve password daxil edilerse 
     else {

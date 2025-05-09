@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Login/SignUp/loginPage.dart';
-import 'package:flutter_application_1/Login/SignUp/registerPage.dart';
+import 'package:flutter_application_1/Login_SignUp/SignUp/loginPage.dart';
+import 'package:flutter_application_1/Login_SignUp/SignUp/registerPage.dart';
+import 'package:flutter_application_1/PortfolioOfChingiz/mainScreenPage.dart';
 
 class entryPage extends StatefulWidget {
 
@@ -183,7 +184,7 @@ class _entryPageState extends State<entryPage> {
               SizedBox(height: 15),
               TextButton(onPressed: () {
                 //Sadece LoginRegister olduguna gore guest kimi hansisa real proyekte daxiletmeye icaze vermemisem
-                navigatePages(context, entryPage());
+                navigatePages(context, MainScreenPage());
               },
                   style: TextButton.styleFrom(
                     backgroundColor: isDarkMode ? Colors.grey[800] : Colors.transparent,
