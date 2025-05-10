@@ -236,7 +236,7 @@ Container about_Part(){
                   width: screeWidth * 0.9,
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(40),
-                    child: Image.asset("lib/assets/my_picture.jpeg",
+                    child: Image.network("https://images.cointelegraph.com/cdn-cgi/image/format=auto,onerror=redirect,quality=90,width=1434/https://s3.cointelegraph.com/uploads/2023-02/01dc312d-150d-4fe8-95bb-6a09294f4ae0.jpg",
                     fit: BoxFit.cover,
                     frameBuilder: (context, child, frame , loading ){
                       if(loading || frame !=null)
@@ -960,14 +960,9 @@ Container contact_Part(){
         ),
       );
   }
-  @override
-  Widget build(BuildContext context) {
-    screeWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      appBar: appBar_Part(),
-      endDrawer: drawer_Part(),
-      body: body_Part(),
-      floatingActionButton: FloatingActionButton(
+  
+  FloatingActionButton fab_Part(){
+    return FloatingActionButton(
         onPressed: (){
           scrollController.animateTo(
             0.0, 
@@ -981,7 +976,17 @@ Container contact_Part(){
         ),
         tooltip: "Back to Top",
         child: Icon(Icons.arrow_upward_sharp,size: 30,color: Colors.white),
-        ),
+        );
+  }
+ 
+  @override
+  Widget build(BuildContext context) {
+    screeWidth = MediaQuery.of(context).size.width;
+    return Scaffold(
+      appBar: appBar_Part(),
+      endDrawer: drawer_Part(),
+      body: body_Part(),
+      floatingActionButton: fab_Part(),
     );
   }
 }
